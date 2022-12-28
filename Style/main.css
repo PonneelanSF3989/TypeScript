@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Akaya Kanadaka");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  background-color: rgb(209, 209, 209);
+  align-items: center;
+  justify-content: center;
+}
+body .main-box {
+  height: 400px;
+  width: 800px;
+  border: 2px solid white;
+  position: absolute;
+  top: 100px;
+}
+body #image-box {
+  height: 400px;
+  width: 800px;
+}
+body #caption-tag {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+  font-family: Akaya Kanadaka;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+}
+body .prev {
+  height: 80px;
+  width: 50px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 1s;
+  top: 150px;
+  border-radius: 10px 0px 0px 10px;
+  position: absolute;
+  right: 0px;
+}
+body .next {
+  height: 80px;
+  width: 50px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 1s;
+  top: 150px;
+  border-radius: 0px 10px 10px 0px;
+  position: absolute;
+  left: 0px;
+}
+body .next:hover,
+body .prev:hover {
+  opacity: 0.5;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  opacity: 0.5;
+}
+body .next:hover {
+  border-radius: 0px 10px 10px 0px;
+}
+body .prev:hover {
+  border-radius: 10px 0px 0px 10px;
+}/*# sourceMappingURL=main.css.map */

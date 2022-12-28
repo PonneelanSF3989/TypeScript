@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Akaya Kanadaka');
+$white-color : white;
+$black-color : black;
+$body-backGround : rgb(209, 209, 209);
+$caption-backGround : rgba(0, 0, 0,0.5);
+@mixin buttonHover
+{
+    opacity: .5;
+    border-radius: 10px;
+    background-color: $white-color;
+    color: $black-color;
+    opacity: 0.5;
+}
+
+@mixin  buttons
+{
+    height: 80px;
+    width: 50px;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    color: $white-color;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 1s;  
+    top: 150px; 
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    display: flex;
+    background-color: $body-backGround;
+    align-items: center;
+    justify-content: center;
+
+
+    .main-box
+    {
+        height: 400px;
+        width: 800px;
+        border: 2px solid $white-color;
+        position: absolute;
+        top: 100px;
+    }
+    #image-box
+    {
+        height: 400px;
+        width: 800px;
+    }
+    #caption-tag
+    {
+        background-color: $caption-backGround;
+        padding: 15px;
+        transform: translateX(-50%);
+        letter-spacing: 2px;
+        font-family: Akaya Kanadaka;
+        border-radius: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: $white-color;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+    }
+    
+    .prev
+    {
+        @include buttons();
+        border-radius: 10px 0px 0px 10px;
+        position:absolute;
+        right: 0px;
+    }
+    .next
+    {
+        @include buttons();
+        border-radius: 0px 10px 10px 0px;
+        position:absolute;
+        left: 0px;
+    }
+    .next:hover,
+    .prev:hover
+    {
+        @include buttonHover();
+    }
+    .next:hover
+    {
+        border-radius: 0px 10px 10px 0px;
+    }
+    .prev:hover
+    {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+
+}
